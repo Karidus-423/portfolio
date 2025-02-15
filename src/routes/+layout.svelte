@@ -1,57 +1,78 @@
-<script lang="ts">
-	import Header from './Header.svelte';
-	import '../app.css';
-
-	let { children } = $props();
+<script>
+	import Navbar from '$lib/navbar.svelte';
+	import Toolbar from '$lib/toolbar.svelte';
 </script>
 
-<div class="app">
-	<Header />
 
-	<main>
-		{@render children()}
-	</main>
+<div class="container">
+	<!-- Top Layer -->
+	<div class="layer top-layer">
+		<div class="col">
+			<Navbar />
+		</div>
+		<div class="col middle"></div>
+		<div class="col">
+			<Toolbar />
+		</div>
+	</div>
 
-	<footer>
-		<p>
-			visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to learn about SvelteKit
-		</p>
-	</footer>
+	<!-- Bottom Layer -->
+	<div class="layer bottom-layer">
+		<div class="col"></div>
+		<div class="col middle">Middle</div>
+		<div class="col"></div>
+	</div>
 </div>
 
+<slot/>
+
 <style>
-	.app {
-		display: flex;
-		flex-direction: column;
-		min-height: 100vh;
-	}
+/* Container to hold both layers */
+.container {
+	position: relative;
+	width: 100%;
+}
 
-	main {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		padding: 1rem;
-		width: 100%;
-		max-width: 64rem;
-		margin: 0 auto;
-		box-sizing: border-box;
-	}
+/* Common layer styles */
+.layer {
+	position: absolute;
+	display: grid;
+	width: 100%;
+	height: 100%; /* Make sure both layers fully overlap */
+	top: 0;
+	left: 0;
+}
 
-	footer {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 12px;
-	}
+/* Top Layer (Higher z-index) */
+.top-layer {
+	grid-template-columns: 25% 50% 25%; /* Middle = 50% */
+	z-index: 2; /* Higher z-index to be above */
+	background-color: rgba(255, 0, 0, 0.5); /* Semi-transparent red */
+}
 
-	footer a {
-		font-weight: bold;
-	}
+/* Bottom Layer (Lower z-index) */
+.bottom-layer {
+	grid-template-columns: 15% 70% 15%; /* Middle = 60% */
+	z-index: 1; /* Lower z-index to be behind */
+	background-color: rgba(0, 0, 255, 0.5); /* Semi-transparent blue */
+}
 
-	@media (min-width: 480px) {
-		footer {
-			padding: 12px 0;
-		}
-	}
+/* Column styling */
+.col {
+	padding: 20px;
+	text-align: center;
+	color: white;
+}
+
+.bottom-layer .col.middle {
+	/* Your styles here */
+	background-color: red;
+	height: 100vh;
+}
+
+
 </style>
+
+
+
+

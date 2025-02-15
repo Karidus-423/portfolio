@@ -1,0 +1,8 @@
+{
+  "tasks": {
+    "start": "deno task dev --open",
+    "test": "deno test --allow-net",
+    "lint": "deno lint"
+  }
+}
+
