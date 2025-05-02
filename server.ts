@@ -1,16 +1,31 @@
-Deno.serve(async (req) => {
-  console.log("Method:", req.method);
+import { serveDir, serveFile } from "jsr:@std/http/file-server";
 
-  const url = new URL(req.url);
-  console.log("Path:", url.pathname);
-  console.log("Query parameters:", url.searchParams);
+Deno.serve({ hostname: "localhost", port: 8080 }, (req: Request) => {
+  const pathname = new URL(req.url).pathname;
 
-  console.log("Headers:", req.headers);
-
-  if (req.body) {
-    const body = await req.text();
-    console.log("Body:", body);
+  switch (pathname) {
+    case "/home":
+      return serveFile(req, "./static/index.html");
+    case "/resume":
+      return serveFile(req, "./static/resume.html");
+    case "/contact":
+      return serveFile(req, "./static/contact.html");
+    case "/blog":
+      return serveFile(req, "./static/blog.html");
+    case "/projects":
+      return serveFile(req, "./static/projects.html");
+    default:
+      break;
   }
 
-  return new Response("Hello, World!");
+  if (pathname.startsWith("/static")) {
+    return serveDir(req, {
+      fsRoot: "public",
+      urlRoot: "static",
+    });
+  }
+
+  return new Response("404: Not Found", {
+    status: 404,
+  });
 });
