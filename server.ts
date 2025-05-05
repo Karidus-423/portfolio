@@ -4,7 +4,7 @@ Deno.serve({ hostname: "localhost", port: 8080 }, (req: Request) => {
   const pathname = new URL(req.url).pathname;
 
   switch (pathname) {
-    case "/home":
+    case "/":
       return serveFile(req, "./static/index.html");
     case "/resume":
       return serveFile(req, "./static/resume.html");
