@@ -1,27 +1,16 @@
 import { serveDir, serveFile } from "jsr:@std/http/file-server";
 
-Deno.serve({ hostname: "localhost", port: 8080 }, (req: Request) => {
+Deno.serve((req: Request) => {
   const pathname = new URL(req.url).pathname;
 
-  switch (pathname) {
-    case "/":
-      return serveFile(req, "./static/index.html");
-    case "/resume":
-      return serveFile(req, "./static/resume.html");
-    case "/contact":
-      return serveFile(req, "./static/contact.html");
-    case "/blog":
-      return serveFile(req, "./static/blog.html");
-    case "/projects":
-      return serveFile(req, "./static/projects.html");
-    default:
-      break;
+  if (pathname === "/") {
+    return serveFile(req, "./static/index.html");
   }
 
-  if (pathname.startsWith("/static")) {
+  if (pathname.startsWith("/")) {
     return serveDir(req, {
-      fsRoot: "public",
-      urlRoot: "static",
+      fsRoot: "./",
+      urlRoot: "",
     });
   }
 
