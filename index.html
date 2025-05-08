@@ -8,7 +8,7 @@
 </head>
 
 <body>
-	<div class="navbar">
+	<nav class="navbar">
 		<div class="nav_links">
 			<a href="./index.html">Home</a>
 			<div class="nav_link_split" style="animation-delay:0.8s"></div>
@@ -22,11 +22,20 @@
 		</div>
 		<div class="nav_toggle">
 			<button class="nav_button">
-				<img src="./assets/navbar_toggle_button.svg" alt="arrow" style="image-rendering:smooth;" />
+				<svg width="21" height="254" viewBox="0 0 21 254" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M2 1L20 135.5L2 253.5" stroke="#3D3F4066" stroke-width="3" />
+				</svg>
 			</button>
 		</div>
-	</div>
-	<div class="content">
+	</nav>
+	<div class="main">
+		<div class="content-background">
+			<canvas id="background-canvas">
+			</canvas>
+		</div>
+		<div class="content">
+			TEXT
+		</div>
 	</div>
 </body>
 
