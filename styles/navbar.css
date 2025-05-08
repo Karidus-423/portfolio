@@ -1,0 +1,85 @@
+.navbar {
+  list-style-type: none;
+  display:flex;
+  margin: 0;
+  padding: 2px;
+  width: 25%;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  box-shadow: 5px 0px 20px rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(10px) brightness(0.9);
+}
+
+.navbar *{
+   backdrop-filter: none !important; /* Ensure no child inherits it */
+  -webkit-backdrop-filter: none !important;
+}
+
+.navbar .nav_links{
+	display: flex;
+	width: 90%;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+}
+
+.navbar a{
+	font-size: 40px;
+	padding: 20%;
+	text-decoration:none;
+	color: brown;
+	transition: font-weight 230ms ease-in-out;
+}
+
+.navbar a:hover{
+	font-weight: 300;
+}
+
+@keyframes nav_link_split_breath{
+from{width:80%}
+to{width:20%}
+}
+
+.navbar .nav_link_split{
+	width: 80%;
+	border:solid blue;
+	opacity: 20%;
+	border-radius: 1px;
+	border-width: 2px;
+	animation-name:nav_link_split_breath;
+	animation-timing-function: ease-in-out;
+	animation-duration: 2s;
+	animation-iteration-count:infinite;
+	animation-direction:alternate;
+}
+
+.navbar .nav_toggle{
+  margin: 0;
+  object-fit:contain;
+  height: 100%;
+  width: 10%;
+  display:inline-flex;
+}
+
+.navbar .nav_toggle img{
+	max-width:100%;
+	height:auto;
+	display:block;
+}
+
+.navbar .nav_toggle .nav_button{
+	width:100%;
+	border:none;
+	background-color:inherit;
+	transition:background-color 230ms ease-in-out;
+}
+
+.navbar .nav_toggle .nav_button:hover{
+	width:100%;
+	border:none;
+	background-color:green;
+}
+
