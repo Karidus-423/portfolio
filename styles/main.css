@@ -24,7 +24,10 @@
 	position:absolute;
 	width:inherit;
 	height:inherit;
-	padding-left:2rem;
+	margin: 2em;
+	/* padding: 2em; */
+	/* padding-left:2rem; */
+	/* padding-right: 10rem; */
 	background-color: var(--gray100);
     backdrop-filter: blur(10px);
 	z-index:1;
