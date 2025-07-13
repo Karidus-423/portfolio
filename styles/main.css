@@ -38,3 +38,8 @@
 	text-align: center;
 	border: 8px inset black;
 }
+
+.main .content h2{
+	font-size: 2rem;
+	text-align: center;
+}
