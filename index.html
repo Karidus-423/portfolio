@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<meta charset="UTF-8" />
+	<meta charset="UTF-8" http-equiv="X-Frame-Options" content="NONE" />
 	<title>Kennett Puerto</title>
 	<link rel="stylesheet" href="./styles/styles.css">
 </head>
@@ -15,10 +15,10 @@
 				<div class="nav_link_split" style="animation-delay:0.8s"></div>
 				<a href="#projects">Projects</a>
 				<div class="nav_link_split" style="animation-delay:0.2s"></div>
-				<a href="#resume">Resume</a>
-				<div class="nav_link_split" style="animation-delay:0.1s"></div>
 				<a href="#blogs">Blogs</a>
 				<div class="nav_link_split" style="animation-delay:0.6s"></div>
+				<a href="#resume">Resume</a>
+				<div class="nav_link_split" style="animation-delay:0.1s"></div>
 				<a href="#contact">Contact</a>
 			</div>
 			<div class="nav_toggle">
@@ -37,43 +37,70 @@
 			<div class="content">
 				<h1 id="home"> Home </h1>
 				<div class="bio">
-					<h3>Bio</h3>
-					<p>
-						Currently studying for my Master's Degree in Computer
-						Science.
-					</p>
-					<h3>Interests</h3>
-					<h3>Currently Working On</h3>
-					<h3>Github Profile</h3>
+					<div class="description">
+						<div class="pfp_box">
+							<iframe class="pfp" onmouseover="this.src='./assets/true_pfp.jpg'"
+								onmouseout="this.src='./assets/pfp.jpg'"></iframe>
+						</div>
+						<p>
+							Currently studying for my Master's Degree in Computer
+							Science at the University of Kentucky.
+						</p>
+					</div>
+					<div class="music">
+						Currently listening to...
+					</div>
 				</div>
 				<div class="project">
 					<h1 id="projects"> Projects </h1>
 				</div>
 				<div class="project">
-					<h2>Urigin Engine</h2>
+					<h2 class="p_title">
+						Bosque Tools
+						<div class="p_border"></div>
+					</h2>
 				</div>
 				<div class="project">
-					<h2>Bosque Tools</h2>
-					<h3>Bosque Language Server</h3>
-					<h3>Bosque Syntax Highlighter</h3>
-					<h3>Bosque Documentation</h3>
+					<h2 class="p_title">
+						Urigin Engine
+						<div class="p_border"></div>
+					</h2>
 				</div>
-				<div class="project">
-					<h2>Serpentine: Zig Language Server</h2>
+				<div class=" project">
+					<h2 class="p_title">
+						Serpentine: Zig Language Server
+						<div class="p_border"></div>
+					</h2>
 				</div>
-				<h1 id="resume"> Resume </h1>
-				<embed src="https://github.com/Karidus-423/portfolio/blob/main/assets/Resume.pdf" type="application/pdf"
-					width="800px" height="2100px" />
 				<h1 id="blogs"> Blogs </h1>
-				<h3> Urigin Engine: Game Engine for any time </h3>
-				<h3>Fixing the Current State of Software</h3>
-				<h3>Good Gameplay</h3>
-				<h3>Character Designs</h3>
-				<h3>Custom Keyboards</h3>
-				<h3>Programming Journey</h3>
-				<h3>What Is It That Makes a Country Successfull?</h3>
+				<h2 class="p_title">
+					Urigin Engine: Game Engine for any time
+					<div class="p_border"></div>
+				</h2>
+				<h1 id="resume"> Resume </h1>
+				<iframe src="https://github.com/Karidus-423/portfolio/blob/main/assets/Resume.pdf"
+					type="application/pdf"> </iframe>
 				<h1 id="contact"> Contact </h1>
-				<h3>Contact Sites/Sources</h3>
+				<div class="contact_contents">
+					<button class="holder" onclick="window.open('https://www.linkedin.com/in/kennettpuerto', '_blank')">
+						<img src="./assets/linkedin-161-svgrepo-com.svg" />
+					</button>
+					<button class="holder" onclick="window.open('https://github.com/Karidus-423', '_blank')">
+						<img src="./assets/github-svgrepo-com.svg" />
+					</button>
+					<button class="holder" onclick="copyToClipboard('kennettdev1@gmail.com')">
+						<img src="./assets/email-9-svgrepo-com.svg" />
+					</button>
+					<script>
+						function copyToClipboard(text) {
+							navigator.clipboard.writeText(text).then(() => {
+								alert('Copied to clipboard: ' + text)
+							}).catch(err => {
+								console.error("Failed to copy text to clipboard: ", err);
+							});
+						}
+					</script>
+				</div>
 			</div>
 		</div>
 	</div>

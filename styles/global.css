@@ -4,21 +4,29 @@
 	--gray100: hsla(221,1%,57%,33%);
 	--gray500: hsla(221,1%,57%,100%);
 	--gold500: hsla(53,16%,55%,100%);
+	--gold600: hsla(53,16%,45%,100%);
 }
 
 *{
 	font-family: "Newsreader", serif;
 	font-size: 1em;
+	border: 0 none;
 }
 
-html, body{
-	margin:0;
-	padding:0;
-	height:100%;
+html,body{
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	display: flex;
 }
 
 .site{
 	height:inherit;
+	width: inherit;
 	display:grid;
 	overflow: scroll;
 	grid-template-columns: 1fr 3fr;
