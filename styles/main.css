@@ -20,7 +20,7 @@
 .main .content{
 	display:grid;
 	padding: 2em 5em 1em 4em;
-	background-color: var(--gray100);
+	background-color: var(--gray500);
     backdrop-filter: blur(10px);
 	z-index:1;
 }
@@ -51,7 +51,7 @@
 	border-radius: 100%;
 	width: 200px;
 	height: 200px;
-	object-fit: fill;
+	object-fit: contain;
 }
 
 .main .bio .pfp:hover{
@@ -63,10 +63,16 @@
 	padding-left: 1em;
 }
 
-.main .content h1{
-	font-size: 4rem;
-	text-align: center;
-	border: 8px inset black;
+.section{
+	font-size: 3em;
+	font-weight: 500;
+	display:flex;
+	justify-content: center;
+	align-text: center;
+	padding: 0.5em;
+	margin: 0.5em;
+	border: 10px inset gray;
+	background-color: var(--gray100);
 }
 
 .main .content h2{
@@ -104,7 +110,39 @@
 }
 
 .main .content .project{
+}
 
+.main .content .project .project_content{
+	display:grid;
+	grid-template-columns: 1fr 5fr; 
+	border: 5px ridge var(--blue100);
+	margin: 1em 3em 1em 3em;
+	padding: 1em;
+}
+
+.main .content .project .project_content .project_img{
+}
+.main .content .project .project_content img{
+	max-width: 150px;
+	max-height: 150px;
+	margin-right: 0;
+}
+
+.main .content .project .project_content .project_desc{
+	display:flex;
+	justify-content: center;
+	align-text: center;
+	margin-left: 0;
+}
+
+.main .content .blog{
+}
+
+.main .content .blog .blog_content{
+	display:grid;
+	border: 5px ridge var(--blue100);
+	margin: 1em 3em 1em 3em;
+	padding: 1em;
 }
 
 
@@ -118,23 +156,36 @@ iframe{
 	grid-template-columns: 1fr 1fr 1fr;
 }
 
-.contact_contents .holder{
+.holder{
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	border: 20px outset grey;
 	background-color: gray;
 	padding: 1em;
+	margin-top: 0.5em;
 	margin-left: 0.5em;
 	margin-right: 0.5em;
 }
 
-.contact_contents .holder:hover{
+#resume.holder{
+	display:flex;
+	justify-content: center;
+	align-text: center;
+	font-size: 3em;
+	font-weight: 500;
+	padding: 0.5em;
+	margin: 0.5em;
+	margin-left: 1em;
+	margin-right: 1em;
+}
+
+.holder:hover{
 	border: 20px outset grey;
 	background-color: #888888;
 }
 
-.contact_contents .holder:active{
+.holder:active{
 	transform: translateY(4px);
 	border: 20px inset grey;
 }

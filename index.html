@@ -9,18 +9,8 @@
 
 <body>
 	<div class="site">
+
 		<nav class="navbar">
-			<div class="nav_links">
-				<a href="#home">Home</a>
-				<div class="nav_link_split" style="animation-delay:0.8s"></div>
-				<a href="#projects">Projects</a>
-				<div class="nav_link_split" style="animation-delay:0.2s"></div>
-				<a href="#blogs">Blogs</a>
-				<div class="nav_link_split" style="animation-delay:0.6s"></div>
-				<a href="#resume">Resume</a>
-				<div class="nav_link_split" style="animation-delay:0.1s"></div>
-				<a href="#contact">Contact</a>
-			</div>
 			<div class="nav_toggle">
 				<button class="nav_button">
 					<svg width="21" height="254" viewBox="0 0 21 254" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -28,14 +18,28 @@
 					</svg>
 				</button>
 			</div>
+			<div class="nav_links">
+				<a href="#home">Home</a>
+				<div class="nav_link_split" style="animation-delay:0.8s"></div>
+				<a href="#projects">Projects</a>
+				<div class="nav_link_split" style="animation-delay:0.2s"></div>
+				<a href="#blogs">Blogs</a>
+				<div class="nav_link_split" style="animation-delay:0.1s"></div>
+				<a href="#contact">Contact</a>
+				<div class="nav_link_split" style="animation-delay:0.6s"></div>
+				<a href="#resume">Resume</a>
+			</div>
 		</nav>
+
 		<div class="main">
+
 			<div class="content-background">
 				<canvas id="background-canvas">
 				</canvas>
 			</div>
+
 			<div class="content">
-				<h1 id="home"> Home </h1>
+				<div class="section" id="home"> Home </div>
 				<div class="bio">
 					<div class="description">
 						<div class="pfp_box">
@@ -51,20 +55,27 @@
 						Currently listening to...
 					</div>
 				</div>
-				<div class="project">
-					<h1 id="projects"> Projects </h1>
-				</div>
-				<div class="project">
+
+				<div class="section" id="projects"> Projects </div>
+				<div class="project" type="button">
 					<h2 class="p_title">
 						Bosque Tools
 						<div class="p_border"></div>
 					</h2>
 				</div>
-				<div class="project">
+				<div class="project" type="button">
 					<h2 class="p_title">
 						Urigin Engine
 						<div class="p_border"></div>
 					</h2>
+					<div class="project_content">
+						<div class="project_img">
+							<img src="./assets/union.png" />
+						</div>
+						<div class="project_desc">
+							Description of project.
+						</div>
+					</div>
 				</div>
 				<div class=" project">
 					<h2 class="p_title">
@@ -72,15 +83,20 @@
 						<div class="p_border"></div>
 					</h2>
 				</div>
-				<h1 id="blogs"> Blogs </h1>
-				<h2 class="p_title">
-					Urigin Engine: Game Engine for any time
-					<div class="p_border"></div>
-				</h2>
-				<h1 id="resume"> Resume </h1>
-				<iframe src="https://github.com/Karidus-423/portfolio/blob/main/assets/Resume.pdf"
-					type="application/pdf"> </iframe>
-				<h1 id="contact"> Contact </h1>
+
+				<div class="section" id="blogs"> Blogs </div>
+				<div class="blog" type="button">
+					<h2 class="p_title">
+						Urigin Engine: Game Engine for any time
+						<div class="p_border"></div>
+					</h2>
+					<div class="blog_content">
+						<h1>Multi Platform Game Engine</h1>
+						<p>Simple blog</p>
+					</div>
+				</div>
+
+				<div class="section" id="contacts"> Contacts </div>
 				<div class="contact_contents">
 					<button class="holder" onclick="window.open('https://www.linkedin.com/in/kennettpuerto', '_blank')">
 						<img src="./assets/linkedin-161-svgrepo-com.svg" />
@@ -91,19 +107,25 @@
 					<button class="holder" onclick="copyToClipboard('kennettdev1@gmail.com')">
 						<img src="./assets/email-9-svgrepo-com.svg" />
 					</button>
-					<script>
-						function copyToClipboard(text) {
-							navigator.clipboard.writeText(text).then(() => {
-								alert('Copied to clipboard: ' + text)
-							}).catch(err => {
-								console.error("Failed to copy text to clipboard: ", err);
-							});
-						}
-					</script>
+				</div>
+
+				<div type="button" class="holder" id="resume"
+					onclick="window.open('https://github.com/Karidus-423/portfolio/blob/74b797bd4a1fc28a022e7c1577fec2b218866ec7/assets/Resume.pdf', '_blank')">
+					Resume
 				</div>
 			</div>
 		</div>
 	</div>
 </body>
+
+<script>
+	function copyToClipboard(text) {
+		navigator.clipboard.writeText(text).then(() => {
+			alert('Copied to clipboard: ' + text)
+		}).catch(err => {
+			console.error("Failed to copy text to clipboard: ", err);
+		});
+	}
+</script>
 
 </html>

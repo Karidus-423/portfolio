@@ -1,7 +1,7 @@
 :root {
 	--blue500: hsla(221,40%,30%,33%);
 	--blue100: hsla(207,3%,24%,20%);
-	--gray100: hsla(221,1%,57%,33%);
+	--gray100: hsla(221, 1%, 47%,100%);
 	--gray500: hsla(221,1%,57%,100%);
 	--gold500: hsla(53,16%,55%,100%);
 	--gold600: hsla(53,16%,45%,100%);
@@ -28,8 +28,8 @@ body{
 	height:inherit;
 	width: inherit;
 	display:grid;
-	overflow: scroll;
 	grid-template-columns: 1fr 3fr;
 	grid-template-rows: 1fr;
+	overflow: scroll;
 	background-color:var(--gray500);
 }
