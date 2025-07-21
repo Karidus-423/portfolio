@@ -28,7 +28,7 @@
 .main .bio{
 	display: grid;
 	align-text: center;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr;
 }
 
 .main .bio .description{
@@ -36,8 +36,6 @@
 	font-size: 15px;
 	font-weight: 700;
 	text-align: left;
-	padding-right: 1em;
-	border-right: 2px solid black;
 }
 
 .main .bio .pfp_box{
@@ -60,7 +58,32 @@
 
 .main .bio .music{
 	border-left: 2px solid black;
+	display: grid;
 	padding-left: 1em;
+	grid-template-columns: 1fr 1fr;
+}
+
+.music .decoration{
+	filter: drop-shadow(30px 10px 4px #000000);
+}
+
+.music .info{
+	display: grid;
+	text-align:center;
+	font-size: 2em;
+}
+
+.music .info .title{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	padding-bottom: 1em;
+}
+
+.music .info .artist{
+	display: flex;
+	flex-direction: column;
+	padding-top: 1em;
 }
 
 .section{
@@ -75,65 +98,14 @@
 	background-color: var(--gray100);
 }
 
-.main .content h2{
+.main .content .title{
+	padding-top: 1em;
+	padding-bottom: 0.5em;
 	font-size: 2rem;
 	text-align: center;
 }
 
 
-.main .content .p_title{
-	display: flex;
-	width: inherit;
-	flex-direction:column;
-	justify-content:center;
-	align-items:center;
-	font-weight: 600;
-	transition:font-weight 350ms ease-in-out;
-}
-
-.main .content .p_title:hover{
-	font-weight: 400;
-	transition:font-weight 350ms ease-in-out;
-}
-
-.main .content .p_title .p_border{
-	width: 10%;
-	padding-top: 10px;
-	border-radius: 1px;
-	border-bottom: 5px solid var(--gold600);
-	transition:width 530ms ease-in-out;
-}
-
-.main .content .p_title:hover .p_border{
-	width: 90%;
-	transition:width 530ms ease-in-out;
-}
-
-.main .content .project{
-}
-
-.main .content .project .project_content{
-	display:grid;
-	grid-template-columns: 1fr 5fr; 
-	border: 5px ridge var(--blue100);
-	margin: 1em 3em 1em 3em;
-	padding: 1em;
-}
-
-.main .content .project .project_content .project_img{
-}
-.main .content .project .project_content img{
-	max-width: 150px;
-	max-height: 150px;
-	margin-right: 0;
-}
-
-.main .content .project .project_content .project_desc{
-	display:flex;
-	justify-content: center;
-	align-text: center;
-	margin-left: 0;
-}
 
 .main .content .blog{
 }
