@@ -34,3 +34,7 @@ body{
 	overflow: scroll;
 	background-color:var(--gray500);
 }
+
+.site.collapsed{
+	display:flex;
+}

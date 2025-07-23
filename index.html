@@ -8,7 +8,7 @@
 </head>
 
 <body>
-	<div class="site">
+	<div id="site" class="site">
 
 		<nav id="navbar" class="navbar">
 			<div class="nav_toggle">
@@ -172,8 +172,10 @@
 <script>
 	const nav_toggle = document.getElementById("nav_toggle");
 	const navbar = document.getElementById('navbar');
+	const site = document.getElementById('site');
 	nav_toggle.addEventListener('click', () => {
 		navbar.classList.toggle('collapsed');
+		site.classList.toggle('collapsed');
 	});
 </script>
 
