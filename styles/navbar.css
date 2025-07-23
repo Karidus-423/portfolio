@@ -16,8 +16,13 @@
 	direction: rtl;
 }
 
-.navbar .closed{
+.navbar.collapsed{
 	grid-template-columns: 1fr;
+	width: clamp(50px, 70px, 300px);
+}
+
+.navbar.collapsed .nav_links{
+	display: none;
 }
 
 @media only screen and (max-width:900px){
@@ -25,6 +30,7 @@
 
 .navbar .nav_links{
 	display: flex;
+	width: auto;
 	flex-direction:column;
 	justify-content:center;
 	align-items:center;

@@ -10,9 +10,9 @@
 <body>
 	<div class="site">
 
-		<nav class="navbar">
+		<nav id="navbar" class="navbar">
 			<div class="nav_toggle">
-				<button class="nav_button">
+				<button id="nav_toggle" class="nav_button">
 					<svg width="21" height="254" viewBox="0 0 21 254" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M2 1L20 135.5L2 253.5" stroke="#3D3F4066" stroke-width="3" />
 					</svg>
@@ -134,7 +134,11 @@
 </script>
 
 <script>
-	GetElementById("");
+	const nav_toggle = document.getElementById("nav_toggle");
+	const navbar = document.getElementById('navbar');
+	nav_toggle.addEventListener('click', () => {
+		navbar.classList.toggle('collapsed');
+	});
 </script>
 
 
