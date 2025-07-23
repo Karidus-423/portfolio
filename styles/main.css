@@ -31,10 +31,10 @@
 	grid-template-columns: 1fr 1fr 1fr;
 }
 
-.main .bio .description{
+.main .description{
 	display: grid;
-	font-size: 15px;
-	font-weight: 700;
+	font-size: 1.1em;
+	font-weight: 550;
 	text-align: left;
 }
 
@@ -46,14 +46,16 @@
 
 .main .bio .pfp{
 	border: 8px solid black;
-	border-radius: 100%;
+	border-radius: 40%;
 	width: 200px;
 	height: 200px;
 	object-fit: contain;
+	transition: border 0.8s;
 }
 
 .main .bio .pfp:hover{
-	border: 8px solid black;
+	border: 8px solid var(--blue500);
+	transition: border 0.5s;
 }
 
 .main .bio .music{
