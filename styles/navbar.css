@@ -53,7 +53,7 @@ from{width:60%}
 to{width:20%}
 }
 
-.navbar .nav_link_split{
+.nav_link_split{
 	width: 80%;
 	border:solid var(--blue100);
 	border-radius: 1px;

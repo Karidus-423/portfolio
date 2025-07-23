@@ -33,21 +33,37 @@
 }
 
 .main .content .project .project_content {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
 }
+
+.main .content .project .project_attributes {
+	margin: 1em 1em 1em 1em;
+	border: 8px inset var(--gray100);
+}
+
 
 .main .content  .project .c_border{ 
 	border: 10px ridge var(--blue100);
 }
 
+.main .content .project .project_img {
+	float:left;
+	margin: 0em 1em 0.5em 0em;
+}
+
 .main .content .project .project_content img{
+	padding: 0.2em;
+	background-color: var(--blue500);
+	border: 15px outset var(--blue200);
 	max-width: 150px;
 	max-height: 150px;
 	margin-right: 0;
 }
 
 .main .content .project .project_content .project_desc{
-	display:flex;
-	justify-content: center;
 	align-text: center;
-	margin-left: 0;
+	padding: 1em;
+	font-size: 1.2rem;
+	font-weight: 600;
 }

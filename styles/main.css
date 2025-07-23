@@ -114,9 +114,24 @@
 
 .main .content .blog .blog_content{
 	display:grid;
-	border: 5px ridge var(--blue100);
+	border: 8px ridge var(--blue100);
 	margin: 1em 3em 1em 3em;
+	padding: 0.2em 1em 0.2em 1em;
+	font-size: 1.2rem;
+	font-weight: 600;
+}
+
+.main .content .blog h1{
+	max-width: 40%;
+	padding: 0.2em;
+	background-color: var(--blue500);
+	border: 15px outset var(--blue200);
+}
+
+.blog .blog_content p{
 	padding: 1em;
+	background-color: var(--blue500);
+	border: 15px inset var(--blue200);
 }
 
 
