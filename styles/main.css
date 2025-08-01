@@ -9,7 +9,6 @@
 .main .content{
 	display:grid;
 	padding: 2em 5em 1em 4em;
-	background-color: var(--gray400);
     backdrop-filter: blur(10px);
 	z-index:1;
 }
@@ -113,13 +112,13 @@
 .main .content .blog h1{
 	max-width: 40%;
 	padding: 0.2em;
-	background-color: var(--blue500);
+	background-color: var(--blue400);
 	border: 15px outset var(--blue200);
 }
 
 .blog .blog_content p{
 	padding: 1em;
-	background-color: var(--blue500);
+	background-color: var(--blue400);
 	border: 15px inset var(--blue200);
 }
 

@@ -54,7 +54,7 @@
 
 .main .content .project .project_content img{
 	padding: 0.2em;
-	background-color: var(--blue500);
+	background-color: var(--blue400);
 	border: 15px outset var(--blue200);
 	max-width: 150px;
 	max-height: 150px;
